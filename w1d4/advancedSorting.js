@@ -6,7 +6,7 @@ var students = [
 ];
 
 students.sort(function(a, b){
-  //sort by name asceding
+  // sort by name asceding
   if (a.name > b.name) {
     return 1;
   }
@@ -14,13 +14,8 @@ students.sort(function(a, b){
     return -1;
   }
   else {
-    //if names are equal, sort by age descending
-    if (a.age > b.age) {
-      return -1;
-    }
-    else {
-      return 1;
-    }
+    // if names are equal, sort by age descending
+    return b.age - a.age;
   }
 });
 
