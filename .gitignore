@@ -1,3 +1,7 @@
 # vagrant files #
 .vagrant
 Vagrantfile
+
+# maintained elsewhere #
+hello-world
+lighthouse-js-fundamentals
