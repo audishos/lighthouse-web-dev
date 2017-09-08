@@ -5,3 +5,6 @@ Vagrantfile
 # maintained elsewhere #
 hello-world
 lighthouse-js-fundamentals
+
+# node_modules #
+.\w1d5\app\node_modules
