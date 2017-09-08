@@ -13,10 +13,12 @@ const bottles = {
     this.currBottles++; // also add a bottle
   },
   poppinBottles: function(investment) {
-    this.currBottles = investment / 2;
-    this.currCaps = investment / 2;
-    this.totalBottles = investment / 2;
+    this.currBottles = Math.floor(investment / 2);
+    this.currCaps = this.currBottles;
+    this.totalBottles = this.currBottles;
 
+    // continue exchanging as long as there are
+    // at least 2 bottles or at least 4 caps
     while (this.currBottles >= 2 || this.currCaps >= 4) {
       if (this.currBottles >= 2) {
         this.exchangeBottles();
@@ -27,9 +29,6 @@ const bottles = {
     }
     return this.totalBottles;
   }
-
 }
 
-
-
-console.log(bottles.poppinBottles(20));
+console.log("The total bottles received will be: " + bottles.poppinBottles(Number(process.argv[2])));
