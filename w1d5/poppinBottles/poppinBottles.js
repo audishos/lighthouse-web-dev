@@ -5,6 +5,7 @@ const bottles = {
   totalPurchased: 0,
   totalFromBottleExchange: 0,
   totalFromCapExchange: 0,
+  change: 0,
   exchangeBottles: function() {
     this.totalBottles++; // +1 to the total
     this.currBottles--; // exchange 2 and get 1 back (net -1)
@@ -22,6 +23,7 @@ const bottles = {
     this.currBottles = this.totalPurchased;
     this.currCaps = this.totalPurchased;
     this.totalBottles = this.totalPurchased;
+    this.change = (investment % 2).toFixed(2);
 
     // continue exchanging as long as there are
     // at least 2 bottles or at least 4 caps
@@ -33,6 +35,7 @@ const bottles = {
         this.exchangeCaps();
       }
     }
+    console.log("CHANGE: $" + this.change);
     console.log("TOTAL BOTTLES: " + this.totalBottles);
     console.log("REMAINING BOTTLES: " + this.currBottles);
     console.log("REMAINING CAPS: " + this.currCaps);
