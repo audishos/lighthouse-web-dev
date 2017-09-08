@@ -34,6 +34,8 @@ const bottles = {
       }
     }
     console.log("TOTAL BOTTLES: " + this.totalBottles);
+    console.log("REMAINING BOTTLES: " + this.currBottles);
+    console.log("REMAINING CAPS: " + this.currCaps);
     console.log("TOTAL EARNED: ");
     console.log(" BOTTLES: " + this.totalFromBottleExchange);
     console.log(" CAPS: " + this.totalFromCapExchange);
